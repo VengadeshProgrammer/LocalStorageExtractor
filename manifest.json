@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "LocalStorage Data Extractor",
+  "version": "1.0",
+  "description": "Extracts localStorage data for testing purposes.",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "http://*/",
+    "https://*/"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://vengadeshprogrammer.github.io/securingWebApplications/current/Home.html",
+        "https://vengadeshprogrammer.github.io/securingWebApplications/current/uploadimage.html"
+      ],
+      "js": ["content_script.js"]
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  }
+}
